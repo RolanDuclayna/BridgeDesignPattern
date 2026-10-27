@@ -29,6 +29,7 @@ public class E_CommerceCompanyTesting {
     OnlinePaymentNotification online = new OnlinePaymentNotification();
     CashOnDeliveryPayment cash = new CashOnDeliveryPayment();
     BitcoinPayment bitcoin = new BitcoinPayment();
+    PushChannel push = new PushChannel(new BitcoinPayment());
 
     @Test
     public void testEmail() {
@@ -63,6 +64,13 @@ public class E_CommerceCompanyTesting {
     public void testBitcoinPayment() {
         String expected = "Paid with Bitcoin" + System.lineSeparator();
         bitcoin.paymentMessage();
+        assertEquals(expected, output.toString());
+    }
+
+    @Test
+    public void testPush() {
+        String expected = "This is the Push Channel. Paid with Bitcoin" + System.lineSeparator();
+        push.printMessage();
         assertEquals(expected, output.toString());
     }
 }
