@@ -6,7 +6,7 @@ public class EmailChannel extends E_CommerceCompany {
 
     @Override
     public void printMessage() {
-        System.out.println("This is the Email Channel.");
+        System.out.print("This is the Email Channel. ");
         payment.paymentMessage();
     }
 }

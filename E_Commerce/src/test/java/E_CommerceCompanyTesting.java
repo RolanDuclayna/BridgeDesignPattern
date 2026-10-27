@@ -31,7 +31,7 @@ public class E_CommerceCompanyTesting {
 
     @Test
     public void testEmail() {
-        String expected = "This is the Email Channel." + System.lineSeparator() + "Paid with Cash on Delivery" + System.lineSeparator();
+        String expected = "This is the Email Channel. Paid with Cash on Delivery" + System.lineSeparator();
         email.printMessage();
         assertEquals(expected, output.toString());
 
@@ -39,7 +39,7 @@ public class E_CommerceCompanyTesting {
 
     @Test
     public void testSms() {
-        String expected = "This is the SMS Channel." + System.lineSeparator() + "Paid online" + System.lineSeparator();
+        String expected = "This is the SMS Channel. Paid online" + System.lineSeparator();
         sms.printMessage();
         assertEquals(expected, output.toString());
     }

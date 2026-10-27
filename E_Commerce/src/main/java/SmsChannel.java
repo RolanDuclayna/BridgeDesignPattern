@@ -6,7 +6,7 @@ public class SmsChannel extends E_CommerceCompany{
 
     @Override
     public void printMessage() {
-        System.out.println("This is the SMS Channel.");
+        System.out.print("This is the SMS Channel. ");
         payment.paymentMessage();
     }
 }
